@@ -5,7 +5,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Contact - VS Foodie Corner</title>
-  <link rel="stylesheet" href="contact.css">
+  <link rel="icon" type="image/x-icon" href="/images/apple-touch-icon.png">
+
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -17,6 +18,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="css/contact.css">
+  <link rel="stylesheet" href="css/navbar.css">
+  <link rel="stylesheet" href="css/footer.css">
   <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Crimson+Text&display=swap" rel="stylesheet">
 
@@ -24,51 +27,27 @@
 </head>
 
 <body>
-  <nav class="navbar navbar-expand-lg  c_nav_class">
-    <div class="container-fluid">
-      <img src="/images/Logo.png" height="60" class="c_image_class">
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <i class="fas fa-regular fa-bars fa-2x"></i>
-      </button>
+  <script>
+    fetch('Navbar.html')
+        .then(response => response.text())
+        .then(data => {
+            document.body.insertAdjacentHTML('afterbegin', data);
+        });
+</script>
+<script>
+  // Fetch and include the navbar.html content
+  fetch('Footer.html')
+      .then(response => response.text())
+      .then(data => {
+          document.body.insertAdjacentHTML('beforeend', data);
+      });
+</script>
 
-
-      <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0 c_nav_list ">
-          <li class="nav-item c_nav_home mx-2">
-            <a class="nav-link text-white" aria-current="page" href="index.html">Home</a>
-          </li>
-          <li class="nav-item mx-2">
-            <a class="nav-link text-white" href="about.html">About</a>
-          </li>
-          <li class="nav-item mx-2">
-            <a class="nav-link text-white" href="Gallery.html">Gallery</a>
-          </li>
-          <li class="nav-item mx-2">
-            <a class="nav-link text-white" href="contact.html">Contact Us</a>
-          </li>
-          <div class="d-flex justify-content-evenly">
-            <li class="nav-item ">
-              <a class="nav-link text-white c_fa_icons1" href="#"><i class="fa-brands fa-facebook-f"></i> </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link text-white c_fa_icons2" href="#"><i class="fa-brands fa-twitter"></i> </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link text-white c_fa_icons3" href="#"><i class="fa-brands fa-instagram"></i></a>
-            </li>
-          </div>
-        </ul>
-      </div>
-    </div>
-  </nav>
   <div class="c_container2 hero-image">
     <div class="hero-text c_p_container">
       <p class="c_par1">Contact Us</p>
       <p class="c_par2">We're easy to get in touch with</p>
     </div>
-  </div>
-  <div class="c_container3">
   </div>
   <div class="c_container4 hero-text">
     <div class="container text-center">
@@ -83,16 +62,13 @@
               Address:
             </p>
             <p class="c_add_detail1">
-              58, Ralph Ave
-            </p>
-            <p class="c_add_detail2">
-              New York,New York 1111
+              <i class="fa-solid fa-location-dot me-2 c-yellow opacity-50"></i>58, Ralph Ave New York,New York 1111
             </p>
             <p class="c_phone_continer">
-              <span class="c_phone_head">Phone:</span><span class="c_phone_detail"> +1 800 000 111</span>
+              <span class="c_phone_head"><i class="fa-solid fa-phone me-2 c-yellow opacity-50"></i>+1 800 000 111</span>
             </p>
             <p class="c_email_container">
-              <span class="c_email_head">Email:</span><span class="c_email_detail"> Contact@Example.com</span>
+              <span class="c_email_head"><i class="fa-solid fa-envelope me-2 c-yellow opacity-50"></i>info@vsfoodie.Com</span>
             </p>
           </div>
         </div>
@@ -167,7 +143,7 @@
             </div>
             <div class="c_sec_loc_inner my-2">
               <img src="/images/location.png" alt="" height="40px">
-              <h5 class="c_loc_sec_title">Patna</h5>
+              <h5 class="c_loc_sec_title">Pune</h5>
               <p class="c_loc_sec_desc">58,Ralph Ave New York,New York 111</p>
             </div>
           </div>
@@ -181,79 +157,8 @@
         width="1600" height="460" style="border:0;" allowfullscreen="" loading="lazy"
         referrerpolicy="no-referrer-when-downgrade" class="c_map"></iframe>
     </div>
-    <footer class="text-center footer-section d-sticky mb-0">
+  
 
-      <div class="container py-5">
-
-        <div class="row ">
-          <div class="col-lg-3 col-md-6 mb-4 mb-md-3 ">
-            <img src="./images/Logo.png" alt="" class="mb-5">
-            <p class="f_desc">Satisfy Your Craving And Indulge in Delicious Flvaors, Join Us For A Meal!</p>
-          </div>
-
-          <div class="col-lg-3 col-md-6 mb-4 mb-md-3">
-            <div class="col-lg-3 col-md-6 mb-4 mb-md-3 row w-100">
-              <h2 class="text-uppercase f_add_title">address</h2>
-              <p class="my-2 f_add_detail">58 Ralph Ave New York,New York 1111</p>
-
-              <p class="my-2 f_add_detail">P:+1 800 000 111 E:Contact@Example.Com</p>
-
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 mb-4 mb-md-3 ">
-            <h5 class="text-uppercase mb-3 f_quick_title">quick links</h5>
-            <ul class="list-unstyled f_quick_desc">
-              <li>
-                <a href="#" class="text-white">Home</a>
-              </li>
-              <li>
-                <a href="#" class="text-white">About Us</a>
-              </li>
-              <li>
-                <a href="#" class="text-white">Gallery</a>
-              </li>
-              <li>
-                <a href="#" class="text-white">Contact Us</a>
-              </li>
-            </ul>
-          </div>
-
-          <div class="col-lg-3 col-md-6 mb-4 mb-md-3 ">
-            <h5 class="text-uppercase mb-3 f_open_title">open hours</h5>
-
-            <ul class="list-unstyled f_open_desc">
-              <li>
-                Monday-Sunday
-              </li>
-              <li>
-                Lunch:12PM-2PM
-              </li>
-              <li>
-                Dinner:6PM-10PM
-              </li>
-              <li class="mt-2">
-                Happy Hours:4PM-6PM
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <hr class="hrStyle" />
-      <div class="d-flex justify-content-between footerEnd">
-        <p class="text-muted"> 2023 © Foodie Corner </p>
-        <div>
-          <i class="fa-brands fa-facebook-f mx-2"></i>
-          <i class="fa-brands fa-twitter mx-2"></i>
-          <i class="fa-brands fa-instagram mx-2"></i>
-        </div>
-      </div>
-    </footer>
-
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
-      crossorigin="anonymous"></script>
 </body>
 
 </html>

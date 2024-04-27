@@ -5,12 +5,6 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
-        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="./css/Gallery.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
@@ -18,54 +12,36 @@
         integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous" />
 
     <link href="https://fonts.googleapis.com/css2?family=Crimson+Text&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text&family=Work+Sans&display=swap" rel="stylesheet">
 
-    <title>Gallery - VS Foodie Corner</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <link rel="stylesheet" href="./css/Gallery.css" />
+        <link rel="stylesheet" href="css/navbar.css">
+  <link rel="stylesheet" href="css/footer.css">
+        <title>Gallery - VS Foodie Corner</title>
+        <link rel="icon" type="image/x-icon" href="/images/apple-touch-icon.png">
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg  c_nav_class">
-        <div class="container-fluid">
-            <img src="./images/Asset 2@300x-8 1.png" height="60" class="c_image_class">
-            <button class="navbar-toggler " type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                aria-label="Toggle navigation">
-                <i class="fas fa-regular fa-bars fa-2x"></i>
-            </button>
-
-
-            <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0 c_nav_list ">
-                    <li class="nav-item c_nav_home mx-2">
-                        <a class="nav-link text-white" aria-current="page" href="index.html">Home</a>
-                    </li>
-                    <li class="nav-item mx-2">
-                        <a class="nav-link text-white" href="about.html">About</a>
-                    </li>
-                    <li class="nav-item mx-2">
-                        <a class="nav-link text-white" href="Gallery.html">Gallery</a>
-                    </li>
-                    <li class="nav-item mx-2">
-                        <a class="nav-link text-white" href="contact.html">Contact Us</a>
-                    </li>
-                    <div class="d-flex justify-content-evenly">
-                        <li class="nav-item ">
-                            <a class="nav-link text-white c_fa_icons1" href="#"><i class="fa-brands fa-facebook-f"></i>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-white c_fa_icons2" href="#"><i class="fa-brands fa-twitter"></i>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-white c_fa_icons3" href="#"><i
-                                    class="fa-brands fa-instagram"></i></a>
-                        </li>
-                    </div>
-                </ul>
-            </div>
-        </div>
-    </nav>
+   <script>
+    fetch('Navbar.html')
+        .then(response => response.text())
+        .then(data => {
+            document.body.insertAdjacentHTML('afterbegin', data);
+        });
+</script>
+<script>
+    // Fetch and include the navbar.html content
+    fetch('Footer.html')
+        .then(response => response.text())
+        .then(data => {
+            document.body.insertAdjacentHTML('beforeend', data);
+        });
+</script>
 
     <div class="main-container">
         <div class="header">
@@ -112,360 +88,6 @@
                             person!
                     </div>
                 </div>
-
-                <!-- lightbox Gallery -->
-                <!-- 
-                <div class="row container mx-auto d-flex flex-row justify-content-center align-items-center flex-wrap">
-                    <div class="column">
-                        <img src="./images/g1 1 (1).png" style="width:100%" onclick="openModal();currentSlide(1)" class="hover-shadow cursor imgs my-2">
-                    </div>
-                    <div class="column">
-                        <img src="./images/g1 2.png" style="width:100%" onclick="openModal();currentSlide(2)" class="hover-shadow cursor imgs my-2">
-                    </div>
-                    <div class="column">
-                        <img src="./images/g1 3.png" style="width:100%" onclick="openModal();currentSlide(3)" class="hover-shadow cursor imgs mx-2 my-2">
-                    </div>
-                    <div class="column">
-                        <img src="./images/g1 4.png" style="width:100%" onclick="openModal();currentSlide(4)" class="hover-shadow cursor imgs mx-2 my-2">
-                    </div>
-                    <div class="column">
-                        <img src="./images/g1 5.png" style="width:100%" onclick="openModal();currentSlide(4)" class="hover-shadow cursor imgs mx-2 my-2">
-                    </div>
-                    <div class="column">
-                        <img src="./images/g1 6.png" style="width:100%" onclick="openModal();currentSlide(4)" class="hover-shadow cursor imgs mx-2 my-2">
-                    </div>
-                    <div class="column">
-                        <img src="./images/g1 7.png" style="width:100%" onclick="openModal();currentSlide(4)" class="hover-shadow cursor imgs mx-2 my-2">
-                    </div>
-                    <div class="column">
-                        <img src="./images/g1 8.png" style="width:100%" onclick="openModal();currentSlide(4)" class="hover-shadow cursor imgs mx-2 my-2">
-                    </div>
-                    <div class="column">
-                        <img src="./images/g1 9.png" style="width:100%" onclick="openModal();currentSlide(4)" class="hover-shadow cursor imgs mx-2 my-2">
-                    </div>
-                    <div class="column">
-                        <img src="./images/g1 10.png" style="width:100%" onclick="openModal();currentSlide(4)" class="hover-shadow cursor imgs mx-2 my-2">
-                    </div>
-                    <div class="column">
-                        <img src="./images/g1 11.png" style="width:100%" onclick="openModal();currentSlide(4)" class="hover-shadow cursor imgs mx-2 my-2">
-                    </div>
-                    <div class="column">
-                        <img src="./images/g1 12.png" style="width:100%" onclick="openModal();currentSlide(4)" class="hover-shadow cursor imgs mx-2 my-2">
-                    </div>
-                </div>
-
-                <div id="myModal" class="modal">
-                    <span class="close cursor" onclick="closeModal()">&times;</span>
-                    <div class="modal-content">
-
-                        <div class="mySlides">
-                            <div class="numbertext">1 / 4</div>
-                            <img src="./images/g1 1 (1).png" style="width:100%">
-                        </div>
-
-                        <div class="mySlides">
-                            <div class="numbertext">2 / 4</div>
-                            <img src="./images/g1 2.png" style="width:100%">
-                        </div>
-
-                        <div class="mySlides">
-                            <div class="numbertext">3 / 4</div>
-                            <img src="./images/g1 3.png" style="width:100%">
-                        </div>
-
-                        <div class="mySlides">
-                            <div class="numbertext">4 / 4</div>
-                            <img src="./images/g1 4.png" style="width:100%">
-                        </div>
-
-                        <div class="mySlides">
-                            <div class="numbertext">5 / 4</div>
-                            <img src="./images/g1 5.png" style="width:100%">
-                        </div>
-
-                        <div class="mySlides">
-                            <div class="numbertext">6 / 4</div>
-                            <img src="./images/g1 6.png" style="width:100%">
-                        </div>
-
-                        <div class="mySlides">
-                            <div class="numbertext">7 / 4</div>
-                            <img src="./images/g1 7.png" style="width:100%">
-                        </div>
-
-                        <div class="mySlides">
-                            <div class="numbertext">8 / 4</div>
-                            <img src="./images/g1 8.png" style="width:100%">
-                        </div>
-
-                        <div class="mySlides">
-                            <div class="numbertext">9 / 4</div>
-                            <img src="./images/g1 9.png" style="width:100%">
-                        </div>
-
-                        <div class="mySlides">
-                            <div class="numbertext">10 / 4</div>
-                            <img src="./images/g1 10.png" style="width:100%">
-                        </div>
-
-                        <div class="mySlides">
-                            <div class="numbertext">11 / 4</div>
-                            <img src="./images/g1 11.png" style="width:100%">
-                        </div>
-
-                        <div class="mySlides">
-                            <div class="numbertext">12 / 4</div>
-                            <img src="./images/g1 12.png" style="width:100%">
-                        </div>
-
-
-                        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-                        <a class="next" onclick="plusSlides(1)">&#10095;</a>
-
-                        <div class="caption-container">
-                            <p id="caption"></p>
-                        </div>
-
-                        <div class="d-flex flex-row justify-content-center align-items-center">
-                            <div class="column">
-                                <img class="demo cursor" src="./images/g1 1 (1).png" style="width:100%" onclick="currentSlide(1)" alt="Nature and sunrise">
-                            </div>
-                            <div class="column">
-                                <img class="demo cursor" src="./images/g1 2.png" style="width:100%" onclick="currentSlide(2)" alt="Snow">
-                            </div>
-                            <div class="column">
-                                <img class="demo cursor" src="./images/g1 3.png" style="width:100%" onclick="currentSlide(3)" alt="Mountains and fjords">
-                            </div>
-                            <div class="column">
-                                <img class="demo cursor" src="./images/g1 4.png" style="width:100%" onclick="currentSlide(4)" alt="Northern Lights">
-                            </div>
-                            <div class="column">
-                                <img class="demo cursor" src="./images/g1 5.png" style="width:100%" onclick="currentSlide(4)" alt="Northern Lights">
-                            </div>
-                            <div class="column">
-                                <img class="demo cursor" src="./images/g1 6.png" style="width:100%" onclick="currentSlide(4)" alt="Northern Lights">
-                            </div>
-                            <div class="column">
-                                <img class="demo cursor" src="./images/g1 7.png" style="width:100%" onclick="currentSlide(4)" alt="Northern Lights">
-                            </div>
-                            <div class="column">
-                                <img class="demo cursor" src="./images/g1 8.png" style="width:100%" onclick="currentSlide(4)" alt="Northern Lights">
-                            </div>
-                            <div class="column">
-                                <img class="demo cursor" src="./images/g1 9.png" style="width:100%" onclick="currentSlide(4)" alt="Northern Lights">
-                            </div>
-                            <div class="column">
-                                <img class="demo cursor" src="./images/g1 10.png" style="width:100%" onclick="currentSlide(4)" alt="Northern Lights">
-                            </div>
-                            <div class="column">
-                                <img class="demo cursor" src="./images/g1 11.png" style="width:100%" onclick="currentSlide(4)" alt="Northern Lights">
-                            </div>
-                            <div class="column">
-                                <img class="demo cursor" src="./images/g1 12.png" style="width:100%" onclick="currentSlide(4)" alt="Northern Lights">
-                            </div>
-                        </div>
-                    </div>
-                </div> -->
-
-
-                <!-- <section class="section mt-5 mx-auto" id="section3">
-
-                    <div class="isotope-box d-flex flex-row justify-content-around align-items-center flex-wrap mx-auto w-75">
-                        <div class="isotope-item mx-1 my-1" data-type="dry">
-                            <figure>
-                                <img src="./images/g1 1 (1).png" alt="sq-sample26" />
-                                <figcaption>
-                                    <a href="./images/g1 1 (1).png" data-lightbox="image" data-title="caption"><svg style="isolation:isolate" viewBox="0 0 50 50" width="50pt" height="50pt">
-                                                        <g>
-                                                            <path d=" M 49.334 46.12 L 33.838 30.624 C 36.369 27.403 37.88 23.345 37.88 18.94 C 37.88 8.497 29.384 0 18.94 0 C 8.497 0 0 8.497 0 18.94 C 0 29.384 8.497 37.88 18.94 37.88 C 23.345 37.88 27.403 36.369 30.624 33.838 L 46.12 49.334 C 46.564 49.778 47.146 50 47.727 50 C 48.309 50 48.891 49.778 49.334 49.334 C 50.222 48.447 50.222 47.008 49.334 46.12 Z  M 4.545 18.94 C 4.545 11.003 11.003 4.545 18.94 4.545 C 26.878 4.545 33.335 11.003 33.335 18.94 C 33.335 26.877 26.878 33.335 18.94 33.335 C 11.003 33.335 4.545 26.877 4.545 18.94 Z " fill="white" />
-                                                            <path d=" M 23.486 16.668 L 21.213 16.668 L 21.213 14.395 C 21.213 13.14 20.195 12.122 18.94 12.122 C 17.685 12.122 16.667 13.14 16.667 14.395 L 16.667 16.668 L 14.395 16.668 C 13.14 16.668 12.122 17.685 12.122 18.94 C 12.122 20.195 13.14 21.213 14.395 21.213 L 16.667 21.213 L 16.667 23.486 C 16.667 24.741 17.685 25.758 18.94 25.758 C 20.195 25.758 21.213 24.741 21.213 23.486 L 21.213 21.213 L 23.486 21.213 C 24.741 21.213 25.758 20.195 25.758 18.94 C 25.758 17.685 24.741 16.668 23.486 16.668 Z " fill="white" />
-                                                        </g>
-                                                    </svg></a>
-                                    <h4>item </h4>
-                                    <span>description </span>
-                                </figcaption>
-                            </figure>
-                        </div>
-
-                        <div class="isotope-item mx-1 my-1" data-type="temperate">
-                            <figure>
-                                <img src="./images/g1 2.png" alt="sq-sample26" />
-                                <figcaption>
-                                    <a href="./images/g1 2.png" data-lightbox="image" data-title="Caption"><svg style="isolation:isolate" viewBox="0 0 50 50" width="50pt" height="50pt">
-                                                        <g>
-                                                            <path d=" M 49.334 46.12 L 33.838 30.624 C 36.369 27.403 37.88 23.345 37.88 18.94 C 37.88 8.497 29.384 0 18.94 0 C 8.497 0 0 8.497 0 18.94 C 0 29.384 8.497 37.88 18.94 37.88 C 23.345 37.88 27.403 36.369 30.624 33.838 L 46.12 49.334 C 46.564 49.778 47.146 50 47.727 50 C 48.309 50 48.891 49.778 49.334 49.334 C 50.222 48.447 50.222 47.008 49.334 46.12 Z  M 4.545 18.94 C 4.545 11.003 11.003 4.545 18.94 4.545 C 26.878 4.545 33.335 11.003 33.335 18.94 C 33.335 26.877 26.878 33.335 18.94 33.335 C 11.003 33.335 4.545 26.877 4.545 18.94 Z " fill="white" />
-                                                            <path d=" M 23.486 16.668 L 21.213 16.668 L 21.213 14.395 C 21.213 13.14 20.195 12.122 18.94 12.122 C 17.685 12.122 16.667 13.14 16.667 14.395 L 16.667 16.668 L 14.395 16.668 C 13.14 16.668 12.122 17.685 12.122 18.94 C 12.122 20.195 13.14 21.213 14.395 21.213 L 16.667 21.213 L 16.667 23.486 C 16.667 24.741 17.685 25.758 18.94 25.758 C 20.195 25.758 21.213 24.741 21.213 23.486 L 21.213 21.213 L 23.486 21.213 C 24.741 21.213 25.758 20.195 25.758 18.94 C 25.758 17.685 24.741 16.668 23.486 16.668 Z " fill="white" />
-                                                        </g>
-                                                    </svg></a>
-                                    <h4>item </h4>
-                                    <span>description </span>
-                                </figcaption>
-                            </figure>
-                        </div>
-
-                        <div class="isotope-item mx-1 my-1" data-type="temperate">
-                            <figure>
-                                <img src="./images/g1 3.png" alt="sq-sample26" />
-                                <figcaption>
-                                    <a href="./images/g1 3.png" data-lightbox="image" data-title="Caption"><svg style="isolation:isolate" viewBox="0 0 50 50" width="50pt" height="50pt">
-                                                        <g>
-                                                            <path d=" M 49.334 46.12 L 33.838 30.624 C 36.369 27.403 37.88 23.345 37.88 18.94 C 37.88 8.497 29.384 0 18.94 0 C 8.497 0 0 8.497 0 18.94 C 0 29.384 8.497 37.88 18.94 37.88 C 23.345 37.88 27.403 36.369 30.624 33.838 L 46.12 49.334 C 46.564 49.778 47.146 50 47.727 50 C 48.309 50 48.891 49.778 49.334 49.334 C 50.222 48.447 50.222 47.008 49.334 46.12 Z  M 4.545 18.94 C 4.545 11.003 11.003 4.545 18.94 4.545 C 26.878 4.545 33.335 11.003 33.335 18.94 C 33.335 26.877 26.878 33.335 18.94 33.335 C 11.003 33.335 4.545 26.877 4.545 18.94 Z " fill="white" />
-                                                            <path d=" M 23.486 16.668 L 21.213 16.668 L 21.213 14.395 C 21.213 13.14 20.195 12.122 18.94 12.122 C 17.685 12.122 16.667 13.14 16.667 14.395 L 16.667 16.668 L 14.395 16.668 C 13.14 16.668 12.122 17.685 12.122 18.94 C 12.122 20.195 13.14 21.213 14.395 21.213 L 16.667 21.213 L 16.667 23.486 C 16.667 24.741 17.685 25.758 18.94 25.758 C 20.195 25.758 21.213 24.741 21.213 23.486 L 21.213 21.213 L 23.486 21.213 C 24.741 21.213 25.758 20.195 25.758 18.94 C 25.758 17.685 24.741 16.668 23.486 16.668 Z " fill="white" />
-                                                        </g>
-                                                    </svg></a>
-                                    <h4>item </h4>
-                                    <span>description </span>
-                                </figcaption>
-                            </figure>
-                        </div>
-
-                        <div class="isotope-item mx-1 my-1" data-type="polar">
-                            <figure>
-                                <img src="./images/g1 4.png" alt="sq-sample26" />
-                                <figcaption>
-                                    <a href="./images/g1 4.png" data-lightbox="image" data-title="caption"><svg style="isolation:isolate" viewBox="0 0 50 50" width="50pt" height="50pt">
-                                                        <g>
-                                                            <path d=" M 49.334 46.12 L 33.838 30.624 C 36.369 27.403 37.88 23.345 37.88 18.94 C 37.88 8.497 29.384 0 18.94 0 C 8.497 0 0 8.497 0 18.94 C 0 29.384 8.497 37.88 18.94 37.88 C 23.345 37.88 27.403 36.369 30.624 33.838 L 46.12 49.334 C 46.564 49.778 47.146 50 47.727 50 C 48.309 50 48.891 49.778 49.334 49.334 C 50.222 48.447 50.222 47.008 49.334 46.12 Z  M 4.545 18.94 C 4.545 11.003 11.003 4.545 18.94 4.545 C 26.878 4.545 33.335 11.003 33.335 18.94 C 33.335 26.877 26.878 33.335 18.94 33.335 C 11.003 33.335 4.545 26.877 4.545 18.94 Z " fill="white" />
-                                                            <path d=" M 23.486 16.668 L 21.213 16.668 L 21.213 14.395 C 21.213 13.14 20.195 12.122 18.94 12.122 C 17.685 12.122 16.667 13.14 16.667 14.395 L 16.667 16.668 L 14.395 16.668 C 13.14 16.668 12.122 17.685 12.122 18.94 C 12.122 20.195 13.14 21.213 14.395 21.213 L 16.667 21.213 L 16.667 23.486 C 16.667 24.741 17.685 25.758 18.94 25.758 C 20.195 25.758 21.213 24.741 21.213 23.486 L 21.213 21.213 L 23.486 21.213 C 24.741 21.213 25.758 20.195 25.758 18.94 C 25.758 17.685 24.741 16.668 23.486 16.668 Z " fill="white" />
-                                                        </g>
-                                                    </svg>
-                                                </a>
-                                    <h4>item </h4>
-                                    <span>description </span>
-                                </figcaption>
-                            </figure>
-                        </div>
-
-                        <div class="isotope-item mx-1 my-1" data-type="temperate">
-                            <figure>
-                                <img src="./images/g1 5.png" alt="sq-sample26" />
-                                <figcaption>
-                                    <a href="./images/g1 5.png" data-lightbox="image" data-title="caption"><svg style="isolation:isolate" viewBox="0 0 50 50" width="50pt" height="50pt">
-                                                        <g>
-                                                            <path d=" M 49.334 46.12 L 33.838 30.624 C 36.369 27.403 37.88 23.345 37.88 18.94 C 37.88 8.497 29.384 0 18.94 0 C 8.497 0 0 8.497 0 18.94 C 0 29.384 8.497 37.88 18.94 37.88 C 23.345 37.88 27.403 36.369 30.624 33.838 L 46.12 49.334 C 46.564 49.778 47.146 50 47.727 50 C 48.309 50 48.891 49.778 49.334 49.334 C 50.222 48.447 50.222 47.008 49.334 46.12 Z  M 4.545 18.94 C 4.545 11.003 11.003 4.545 18.94 4.545 C 26.878 4.545 33.335 11.003 33.335 18.94 C 33.335 26.877 26.878 33.335 18.94 33.335 C 11.003 33.335 4.545 26.877 4.545 18.94 Z " fill="white" />
-                                                            <path d=" M 23.486 16.668 L 21.213 16.668 L 21.213 14.395 C 21.213 13.14 20.195 12.122 18.94 12.122 C 17.685 12.122 16.667 13.14 16.667 14.395 L 16.667 16.668 L 14.395 16.668 C 13.14 16.668 12.122 17.685 12.122 18.94 C 12.122 20.195 13.14 21.213 14.395 21.213 L 16.667 21.213 L 16.667 23.486 C 16.667 24.741 17.685 25.758 18.94 25.758 C 20.195 25.758 21.213 24.741 21.213 23.486 L 21.213 21.213 L 23.486 21.213 C 24.741 21.213 25.758 20.195 25.758 18.94 C 25.758 17.685 24.741 16.668 23.486 16.668 Z " fill="white" />
-                                                        </g>
-                                                    </svg></a>
-                                    <h4>item </h4>
-                                    <span>description </span>
-                                </figcaption>
-                            </figure>
-                        </div>
-
-                        <div class="isotope-item mx-1 my-1" data-type="dry">
-                            <figure>
-                                <img src="./images/g1 6.png" alt="galdiator" />
-                                <figcaption>
-                                    <a href="./images/g1 6.png" data-lightbox="image" data-title="caption"><svg style="isolation:isolate" viewBox="0 0 50 50" width="50pt" height="50pt">
-                                                        <g>
-                                                            <path d=" M 49.334 46.12 L 33.838 30.624 C 36.369 27.403 37.88 23.345 37.88 18.94 C 37.88 8.497 29.384 0 18.94 0 C 8.497 0 0 8.497 0 18.94 C 0 29.384 8.497 37.88 18.94 37.88 C 23.345 37.88 27.403 36.369 30.624 33.838 L 46.12 49.334 C 46.564 49.778 47.146 50 47.727 50 C 48.309 50 48.891 49.778 49.334 49.334 C 50.222 48.447 50.222 47.008 49.334 46.12 Z  M 4.545 18.94 C 4.545 11.003 11.003 4.545 18.94 4.545 C 26.878 4.545 33.335 11.003 33.335 18.94 C 33.335 26.877 26.878 33.335 18.94 33.335 C 11.003 33.335 4.545 26.877 4.545 18.94 Z " fill="white" />
-                                                            <path d=" M 23.486 16.668 L 21.213 16.668 L 21.213 14.395 C 21.213 13.14 20.195 12.122 18.94 12.122 C 17.685 12.122 16.667 13.14 16.667 14.395 L 16.667 16.668 L 14.395 16.668 C 13.14 16.668 12.122 17.685 12.122 18.94 C 12.122 20.195 13.14 21.213 14.395 21.213 L 16.667 21.213 L 16.667 23.486 C 16.667 24.741 17.685 25.758 18.94 25.758 C 20.195 25.758 21.213 24.741 21.213 23.486 L 21.213 21.213 L 23.486 21.213 C 24.741 21.213 25.758 20.195 25.758 18.94 C 25.758 17.685 24.741 16.668 23.486 16.668 Z " fill="white" />
-                                                        </g>
-                                                    </svg></a>
-                                    <h4>item </h4>
-                                    <span>description </span>
-                                </figcaption>
-                            </figure>
-                        </div>
-
-                        <div class="isotope-item mx-1 my-1" data-type="dry">
-                            <figure>
-                                <img src="./images/g1 7.png" alt="galdiator" />
-                                <figcaption>
-                                    <a href="./images/g1 7.png" data-lightbox="image" data-title="caption"><svg style="isolation:isolate" viewBox="0 0 50 50" width="50pt" height="50pt">
-                                                        <g>
-                                                            <path d=" M 49.334 46.12 L 33.838 30.624 C 36.369 27.403 37.88 23.345 37.88 18.94 C 37.88 8.497 29.384 0 18.94 0 C 8.497 0 0 8.497 0 18.94 C 0 29.384 8.497 37.88 18.94 37.88 C 23.345 37.88 27.403 36.369 30.624 33.838 L 46.12 49.334 C 46.564 49.778 47.146 50 47.727 50 C 48.309 50 48.891 49.778 49.334 49.334 C 50.222 48.447 50.222 47.008 49.334 46.12 Z  M 4.545 18.94 C 4.545 11.003 11.003 4.545 18.94 4.545 C 26.878 4.545 33.335 11.003 33.335 18.94 C 33.335 26.877 26.878 33.335 18.94 33.335 C 11.003 33.335 4.545 26.877 4.545 18.94 Z " fill="white" />
-                                                            <path d=" M 23.486 16.668 L 21.213 16.668 L 21.213 14.395 C 21.213 13.14 20.195 12.122 18.94 12.122 C 17.685 12.122 16.667 13.14 16.667 14.395 L 16.667 16.668 L 14.395 16.668 C 13.14 16.668 12.122 17.685 12.122 18.94 C 12.122 20.195 13.14 21.213 14.395 21.213 L 16.667 21.213 L 16.667 23.486 C 16.667 24.741 17.685 25.758 18.94 25.758 C 20.195 25.758 21.213 24.741 21.213 23.486 L 21.213 21.213 L 23.486 21.213 C 24.741 21.213 25.758 20.195 25.758 18.94 C 25.758 17.685 24.741 16.668 23.486 16.668 Z " fill="white" />
-                                                        </g>
-                                                    </svg></a>
-                                    <h4>item </h4>
-                                    <span>description </span>
-                                </figcaption>
-                            </figure>
-                        </div>
-
-                        <div class="isotope-item mx-1 my-1" data-type="dry">
-                            <figure>
-                                <img src="./images/g1 8.png" alt="galdiator" />
-                                <figcaption>
-                                    <a href="./images/g1 8.png" data-lightbox="image" data-title="caption"><svg style="isolation:isolate" viewBox="0 0 50 50" width="50pt" height="50pt">
-                                                        <g>
-                                                            <path d=" M 49.334 46.12 L 33.838 30.624 C 36.369 27.403 37.88 23.345 37.88 18.94 C 37.88 8.497 29.384 0 18.94 0 C 8.497 0 0 8.497 0 18.94 C 0 29.384 8.497 37.88 18.94 37.88 C 23.345 37.88 27.403 36.369 30.624 33.838 L 46.12 49.334 C 46.564 49.778 47.146 50 47.727 50 C 48.309 50 48.891 49.778 49.334 49.334 C 50.222 48.447 50.222 47.008 49.334 46.12 Z  M 4.545 18.94 C 4.545 11.003 11.003 4.545 18.94 4.545 C 26.878 4.545 33.335 11.003 33.335 18.94 C 33.335 26.877 26.878 33.335 18.94 33.335 C 11.003 33.335 4.545 26.877 4.545 18.94 Z " fill="white" />
-                                                            <path d=" M 23.486 16.668 L 21.213 16.668 L 21.213 14.395 C 21.213 13.14 20.195 12.122 18.94 12.122 C 17.685 12.122 16.667 13.14 16.667 14.395 L 16.667 16.668 L 14.395 16.668 C 13.14 16.668 12.122 17.685 12.122 18.94 C 12.122 20.195 13.14 21.213 14.395 21.213 L 16.667 21.213 L 16.667 23.486 C 16.667 24.741 17.685 25.758 18.94 25.758 C 20.195 25.758 21.213 24.741 21.213 23.486 L 21.213 21.213 L 23.486 21.213 C 24.741 21.213 25.758 20.195 25.758 18.94 C 25.758 17.685 24.741 16.668 23.486 16.668 Z " fill="white" />
-                                                        </g>
-                                                    </svg></a>
-                                    <h4>item </h4>
-                                    <span>description </span>
-                                </figcaption>
-                            </figure>
-                        </div>
-
-                        <div class="isotope-item mx-1 my-1" data-type="dry">
-                            <figure>
-                                <img src="./images/g1 9.png" alt="galdiator" />
-                                <figcaption>
-                                    <a href="./images/g1 9.png" data-lightbox="image" data-title="caption"><svg style="isolation:isolate" viewBox="0 0 50 50" width="50pt" height="50pt">
-                                                        <g>
-                                                            <path d=" M 49.334 46.12 L 33.838 30.624 C 36.369 27.403 37.88 23.345 37.88 18.94 C 37.88 8.497 29.384 0 18.94 0 C 8.497 0 0 8.497 0 18.94 C 0 29.384 8.497 37.88 18.94 37.88 C 23.345 37.88 27.403 36.369 30.624 33.838 L 46.12 49.334 C 46.564 49.778 47.146 50 47.727 50 C 48.309 50 48.891 49.778 49.334 49.334 C 50.222 48.447 50.222 47.008 49.334 46.12 Z  M 4.545 18.94 C 4.545 11.003 11.003 4.545 18.94 4.545 C 26.878 4.545 33.335 11.003 33.335 18.94 C 33.335 26.877 26.878 33.335 18.94 33.335 C 11.003 33.335 4.545 26.877 4.545 18.94 Z " fill="white" />
-                                                            <path d=" M 23.486 16.668 L 21.213 16.668 L 21.213 14.395 C 21.213 13.14 20.195 12.122 18.94 12.122 C 17.685 12.122 16.667 13.14 16.667 14.395 L 16.667 16.668 L 14.395 16.668 C 13.14 16.668 12.122 17.685 12.122 18.94 C 12.122 20.195 13.14 21.213 14.395 21.213 L 16.667 21.213 L 16.667 23.486 C 16.667 24.741 17.685 25.758 18.94 25.758 C 20.195 25.758 21.213 24.741 21.213 23.486 L 21.213 21.213 L 23.486 21.213 C 24.741 21.213 25.758 20.195 25.758 18.94 C 25.758 17.685 24.741 16.668 23.486 16.668 Z " fill="white" />
-                                                        </g>
-                                                    </svg></a>
-                                    <h4>item </h4>
-                                    <span>description </span>
-                                </figcaption>
-                            </figure>
-                        </div>
-
-                        <div class="isotope-item mx-1 my-1" data-type="dry">
-                            <figure>
-                                <img src="./images/g1 10.png" alt="galdiator" />
-                                <figcaption>
-                                    <a href="./images/g1 10.png" data-lightbox="image" data-title="caption"><svg style="isolation:isolate" viewBox="0 0 50 50" width="50pt" height="50pt">
-                                                        <g>
-                                                            <path d=" M 49.334 46.12 L 33.838 30.624 C 36.369 27.403 37.88 23.345 37.88 18.94 C 37.88 8.497 29.384 0 18.94 0 C 8.497 0 0 8.497 0 18.94 C 0 29.384 8.497 37.88 18.94 37.88 C 23.345 37.88 27.403 36.369 30.624 33.838 L 46.12 49.334 C 46.564 49.778 47.146 50 47.727 50 C 48.309 50 48.891 49.778 49.334 49.334 C 50.222 48.447 50.222 47.008 49.334 46.12 Z  M 4.545 18.94 C 4.545 11.003 11.003 4.545 18.94 4.545 C 26.878 4.545 33.335 11.003 33.335 18.94 C 33.335 26.877 26.878 33.335 18.94 33.335 C 11.003 33.335 4.545 26.877 4.545 18.94 Z " fill="white" />
-                                                            <path d=" M 23.486 16.668 L 21.213 16.668 L 21.213 14.395 C 21.213 13.14 20.195 12.122 18.94 12.122 C 17.685 12.122 16.667 13.14 16.667 14.395 L 16.667 16.668 L 14.395 16.668 C 13.14 16.668 12.122 17.685 12.122 18.94 C 12.122 20.195 13.14 21.213 14.395 21.213 L 16.667 21.213 L 16.667 23.486 C 16.667 24.741 17.685 25.758 18.94 25.758 C 20.195 25.758 21.213 24.741 21.213 23.486 L 21.213 21.213 L 23.486 21.213 C 24.741 21.213 25.758 20.195 25.758 18.94 C 25.758 17.685 24.741 16.668 23.486 16.668 Z " fill="white" />
-                                                        </g>
-                                                    </svg></a>
-                                    <h4>item </h4>
-                                    <span>description </span>
-                                </figcaption>
-                            </figure>
-                        </div>
-
-
-                        <div class="isotope-item mx-1 my-1" data-type="dry">
-                            <figure>
-                                <img src="./images/g1 11.png" alt="galdiator" />
-                                <figcaption>
-                                    <a href="./images/g1 11.png" data-lightbox="image" data-title="caption"><svg style="isolation:isolate" viewBox="0 0 50 50" width="50pt" height="50pt">
-                                                        <g>
-                                                            <path d=" M 49.334 46.12 L 33.838 30.624 C 36.369 27.403 37.88 23.345 37.88 18.94 C 37.88 8.497 29.384 0 18.94 0 C 8.497 0 0 8.497 0 18.94 C 0 29.384 8.497 37.88 18.94 37.88 C 23.345 37.88 27.403 36.369 30.624 33.838 L 46.12 49.334 C 46.564 49.778 47.146 50 47.727 50 C 48.309 50 48.891 49.778 49.334 49.334 C 50.222 48.447 50.222 47.008 49.334 46.12 Z  M 4.545 18.94 C 4.545 11.003 11.003 4.545 18.94 4.545 C 26.878 4.545 33.335 11.003 33.335 18.94 C 33.335 26.877 26.878 33.335 18.94 33.335 C 11.003 33.335 4.545 26.877 4.545 18.94 Z " fill="white" />
-                                                            <path d=" M 23.486 16.668 L 21.213 16.668 L 21.213 14.395 C 21.213 13.14 20.195 12.122 18.94 12.122 C 17.685 12.122 16.667 13.14 16.667 14.395 L 16.667 16.668 L 14.395 16.668 C 13.14 16.668 12.122 17.685 12.122 18.94 C 12.122 20.195 13.14 21.213 14.395 21.213 L 16.667 21.213 L 16.667 23.486 C 16.667 24.741 17.685 25.758 18.94 25.758 C 20.195 25.758 21.213 24.741 21.213 23.486 L 21.213 21.213 L 23.486 21.213 C 24.741 21.213 25.758 20.195 25.758 18.94 C 25.758 17.685 24.741 16.668 23.486 16.668 Z " fill="white" />
-                                                        </g>
-                                                    </svg></a>
-                                    <h4>item </h4>
-                                    <span>description </span>
-                                </figcaption>
-                            </figure>
-                        </div>
-
-                        <div class="isotope-item mx-1 my-1" data-type="dry">
-                            <figure>
-                                <img src="./images/g1 12.png" alt="galdiator" />
-                                <figcaption>
-                                    <a href="./images/g1 12.png" data-lightbox="image" data-title="caption"><svg style="isolation:isolate" viewBox="0 0 50 50" width="50pt" height="50pt">
-                                                        <g>
-                                                            <path d=" M 49.334 46.12 L 33.838 30.624 C 36.369 27.403 37.88 23.345 37.88 18.94 C 37.88 8.497 29.384 0 18.94 0 C 8.497 0 0 8.497 0 18.94 C 0 29.384 8.497 37.88 18.94 37.88 C 23.345 37.88 27.403 36.369 30.624 33.838 L 46.12 49.334 C 46.564 49.778 47.146 50 47.727 50 C 48.309 50 48.891 49.778 49.334 49.334 C 50.222 48.447 50.222 47.008 49.334 46.12 Z  M 4.545 18.94 C 4.545 11.003 11.003 4.545 18.94 4.545 C 26.878 4.545 33.335 11.003 33.335 18.94 C 33.335 26.877 26.878 33.335 18.94 33.335 C 11.003 33.335 4.545 26.877 4.545 18.94 Z " fill="white" />
-                                                            <path d=" M 23.486 16.668 L 21.213 16.668 L 21.213 14.395 C 21.213 13.14 20.195 12.122 18.94 12.122 C 17.685 12.122 16.667 13.14 16.667 14.395 L 16.667 16.668 L 14.395 16.668 C 13.14 16.668 12.122 17.685 12.122 18.94 C 12.122 20.195 13.14 21.213 14.395 21.213 L 16.667 21.213 L 16.667 23.486 C 16.667 24.741 17.685 25.758 18.94 25.758 C 20.195 25.758 21.213 24.741 21.213 23.486 L 21.213 21.213 L 23.486 21.213 C 24.741 21.213 25.758 20.195 25.758 18.94 C 25.758 17.685 24.741 16.668 23.486 16.668 Z " fill="white" />
-                                                        </g>
-                                                    </svg></a>
-                                    <h4>item </h4>
-                                    <span>description </span>
-                                </figcaption>
-                            </figure>
-                        </div>
-                    </div>
-                </section> -->
                 <div class="container">
                     <div class="row mx-5 my-3">
                         <a href="./images/g1 1 (1).png" data-toggle="lightbox" data-gallery="example-gallery"
@@ -527,7 +149,7 @@
 
 
 
-                <div class="container contactContainer pt-4">
+                <div class="container contactContainer pt-4 pb-4">
                     <div class="contactContent d-flex justify-content-around align-items-center">
                         <img src="./images/Group 415.png" alt="" class="mx-3" >
                         <div class="mx-3" align="center">
@@ -543,81 +165,6 @@
         </div>
 
     </div>
-
-    <!-- footer section -->
-
-
-    <footer class="text-center footer-section d-sticky mb-0">
-
-        <div class="container py-5">
-
-            <div class="row ">
-                <div class="col-lg-3 col-md-6 mb-4 mb-md-3 ">
-                    <img src="./images/Asset 2@300x-8 1.png" alt="" class="mb-5" >
-                    <p>Satisfy your cravings for deliciousness at VS Foodie Corner - Where every dish is an exquisite
-                        skillful creation.</p>
-                </div>
-
-                <div class="col-lg-3 col-md-6 mb-4 mb-md-3">
-                    <div class="col-lg-3 col-md-6 mb-4 mb-md-3 row w-100">
-                        <h2 class="text-uppercase">address</h2>
-                        <p class="my-2">58 Ralph Ave New York,New York 1111</p>
-
-                        <p class="my-2">P:+1 800 000 111 E:Contact@Example.Com</p>
-
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-md-6 mb-4 mb-md-3 ">
-                    <h5 class="text-uppercase mb-3 ">quick links</h5>
-                    <ul class="list-unstyled ">
-                        <li>
-                            <a href="#" class="text-white">Home</a>
-                        </li>
-                        <li>
-                            <a href="#" class="text-white">About Us</a>
-                        </li>
-                        <li>
-                            <a href="#" class="text-white">Gallery</a>
-                        </li>
-                        <li>
-                            <a href="#" class="text-white">Contact Us</a>
-                        </li>
-                    </ul>
-                </div>
-
-                <div class="col-lg-3 col-md-6 mb-4 mb-md-3 ">
-                    <h5 class="text-uppercase mb-3 ">open hours</h5>
-
-                    <ul class="list-unstyled ">
-                        <li>
-                            Monday-Sunday
-                        </li>
-                        <li>
-                            Lunch:12PM-2PM
-                        </li>
-                        <li>
-                            Dinner:6PM-10PM
-                        </li>
-                        <li class="mt-2">
-                            Happy Hours:4PM-6PM
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <hr class="hrStyle" />
-        <div class="d-flex justify-content-between footerEnd">
-            <p class="text-muted"> 2023 © Foodie Corner </p>
-            <div>
-                <i class="fa-brands fa-facebook-f mx-2"></i>
-                <i class="fa-brands fa-twitter mx-2"></i>
-                <i class="fa-brands fa-instagram mx-2"></i>
-            </div>
-        </div>
-    </footer>
-
-
 
     <script src="https://cdn.jsdelivr.net/npm/bs5-lightbox@1.8.3/dist/index.bundle.min.js"></script>
 
